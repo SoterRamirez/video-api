@@ -11,6 +11,7 @@ router.get('/', async function(req, res, next) {
     const { tags } = req.query;
     try {
         const movies = await moviesService.getMovies({ tags });
+        throw new Error('Error ggeting movies');
 
         res.status(200).json({
         data: movies,
