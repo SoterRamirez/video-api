@@ -152,7 +152,7 @@ const moviesMock = [
       tags: ['Action|Adventure|Comedy|Drama|War', 'Animation', 'Drama']
     }
   ];
-  
+
   module.exports = {
     moviesMock
   };

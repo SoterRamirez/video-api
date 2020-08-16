@@ -66,18 +66,19 @@ try {
 }
 });
 
-    router.delete('/:movieId', async function(req, res, next) {
-        const { movieId } = req.params;
+router.delete('/:movieId', async function(req, res, next) {
+    const { movieId } = req.params;
+
     try {
-        const deletedMovieId = await moviesService.delateMovie({ movieId });
+        const deletedMovieId = await moviesService.deleteMovie({ movieId });
 
         res.status(200).json({
-        data: deletedMovieId,
-        message: 'movie deleted'
+            data: deletedMovieId,
+            message: 'movie deleted'
         });
-    } catch (err) {
+        } catch (err) {
         next(err);
-    }
+        }
     });
 }
 
