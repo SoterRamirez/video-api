@@ -6,15 +6,24 @@ const moviesApi = require('./routes/movies.js');
 
 const {
   logErrors,
-  errorHandler
+  errorHandler,
+  wrapErrors
 } = require('./utils/middleware/errorHandlers.js');
+
+const notFoundHandler = require('./utils/middleware/notFoundHandler');
 
 // body parser
 app.use(express.json());
 
+//routes
 moviesApi(app);
 
+//Error 404
+app.use(notFoundHandler);
+
+//Manejadores de errorres
 app.use(logErrors);
+app.use(wrapErrors);
 app.use(errorHandler);
 
 app.listen(config.port, function() {
