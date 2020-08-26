@@ -88,6 +88,7 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+node_modules/chalk/
 
 # TypeScript v1 declaration files
 typings/
@@ -182,3 +183,8 @@ $RECYCLE.BIN/
 
 # End of https://www.toptal.com/developers/gitignore/api/node,macos,windows,linux
 .vercel
+node_modules/chalk/index.d.ts
+node_modules/chalk/index.d.ts
+node_modules/chalk/package.json
+node_modules/chalk/readme.md
+node_modules/chalk/source/index.js
