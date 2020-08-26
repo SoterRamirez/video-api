@@ -27,5 +27,5 @@ app.use(wrapErrors);
 app.use(errorHandler);
 
 app.listen(config.port, function() {
-  console.log(`Listening http://localhost:${config.port}`);
+  console.log(`Escuchando en http://localhost:${config.port}`);
 });
